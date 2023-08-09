@@ -83,3 +83,52 @@ button {
   color: #333;
   text-decoration: underline;
 }
+.hamburger,.sidenav{
+  display: none;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav li{
+  list-style: none;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #fff;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.hamburger{
+ position: absolute;
+ top: 15px;
+ right: 0;
+}
+@media only screen and (max-width:425px) {
+  .navbar-nav{
+   display: none;
+  }
+  .hamburger,.sidenav{
+   display: block;
+ }
+ }

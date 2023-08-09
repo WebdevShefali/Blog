@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Blog</title>
-    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -16,11 +16,24 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ubuntu&display=swap"
       rel="stylesheet"
     />
-    <nav class="navbar">
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
         <div class="navbar-header">
           <p class="navbar-brand">BLOGS</p>
         </div>
+        <div id="sidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <% if (currentUser) { %>
+            <li id="home"><a href="/home">Home</a></li>
+            <li id="compose"><a href="/compose">Write</a></li>
+            <li id="logout"><a href="/logout">LogOut</a></li>
+            <% } else { %>
+            <li id="home"><a href="/home">Home</a></li>
+            <li id="login"><a href="/">LogIn</a></li>
+            <li id="register"><a href="/register">SignUp</a></li>
+            <% } %>
+        </div>
+        <span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
         <ul class="nav navbar-nav navbar-right">
           <% if (currentUser) { %>
           <li id="home"><a href="/home">Home</a></li>
@@ -36,7 +49,4 @@
     </nav>
 
     <body>
-      <div class="container home-section"></div>
-    </body>
-  </head>
-</html>
+      <div class="container home-section">
