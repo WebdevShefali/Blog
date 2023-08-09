@@ -8,6 +8,7 @@ const Post = require("./models/blog");
 const User = require("./models/User");
 const bcrypt = require("bcrypt");
 const session = require("express-session");
+const PORT = process.env.PORT || 8000;
 
 connectToMongo();
 
@@ -116,6 +117,6 @@ app.get("/logout", (req, res) => {
   req.session.destroy();
   res.redirect("/");
 });
-app.listen(8000, function () {
-  console.log("Server started on port 8000");
+app.listen(PORT, function () {
+  console.log(`Server started on port ${PORT}`);
 });

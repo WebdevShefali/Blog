@@ -1,6 +1,7 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 const connectToMongo = () => {
-  mongoose.connect("mongodb://localhost:27017/blogDB", {
+  mongoose.connect(process.env.mongoURI, {
     useNewUrlParser: true,
   });
 };
