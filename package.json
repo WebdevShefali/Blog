@@ -1,0 +1,23 @@
+{
+  "name": "ejs-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.18.3",
+    "dotenv": "^16.3.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^9.0.1",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.3.6",
+    "multer": "^1.4.5-lts.1"
+  }
+}

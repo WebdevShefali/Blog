@@ -1,0 +1,12 @@
+<%- include("partials/header"); -%>
+<div class="register-form">
+  <form action="/register" method="post">
+    <h1>Create an account</h1>
+    <input type="text" name="name" placeholder="Name" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <input type="password" name="password" placeholder="Password" required />
+    <button type="submit">Sign Up</button>
+  </form>
+  <p>Already have an account? <a href="/">Login</a></p>
+</div>
+<%- include("partials/footer"); -%>
