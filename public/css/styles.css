@@ -5,6 +5,7 @@
 }
 body {
   font-family: "Ubuntu", sans-serif;
+  overflow-x: hidden;
 }
 .home-section {
   margin-top: 5%;
@@ -70,7 +71,7 @@ textarea {
   border-radius: 4px;
   width: 280px;
 }
-button {
+button,.editBtn,.dltBtn {
   padding: 10px 20px;
   background-color: #333;
   color: white;
@@ -123,6 +124,10 @@ button {
  position: absolute;
  top: 15px;
  right: 0;
+}
+.editBtn:hover,.editBtn:active,.dltBtn:hover,.dltBtn:active{
+  color: #fff;
+  text-decoration: none;
 }
 @media only screen and (max-width:425px) {
   .navbar-nav{

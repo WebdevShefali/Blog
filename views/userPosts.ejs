@@ -1,0 +1,17 @@
+<%- include("partials/header"); -%> 
+<div class="container">
+    <h1 style="padding-bottom: 10px">Your Posts</h1>
+    <% if (userPosts.length === 0) { %>
+        <p>You haven't posted anything yet.</p>
+      <% } else { %>
+        <% userPosts.forEach(post => { %>
+          
+              <h2 style="padding-top: 10px"><%= post.title %></h2>
+              <p style="padding: 10px 0"><%= post.content %></p>
+              <a class="editBtn" href="/edit/<%= post._id %>">Edit</a>
+    <a class="dltBtn" href="/delete/<%= post._id %>">Delete</a>
+         
+          <% }); %>
+      <% } %>
+
+<%- include("partials/footer"); -%>
