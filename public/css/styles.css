@@ -31,7 +31,7 @@ body {
 .navbar-nav li a:hover,.navbar-nav li a:active {
   background: black;
 }
-.footer-padding {
+/* .footer-padding {
   padding-bottom: 60px;
 }
 .footer {
@@ -44,7 +44,7 @@ body {
 .footer p {
   margin-top: 25px;
   font-size: 12px;
-}
+} */
 .author-name {
   font-family: "Dancing Script", cursive;
   font-weight: 800;
