@@ -6,10 +6,10 @@
       <% } else { %>
         <% userPosts.forEach(post => { %>
           
-              <h2 style="padding-top: 10px"><%= post.title %></h2>
-              <p style="padding: 10px 0"><%= post.content %></p>
+              <h2 style="padding: 10px 0"><%= post.title %></h2>
               <a class="editBtn" href="/edit/<%= post._id %>">Edit</a>
-    <a class="dltBtn" href="/delete/<%= post._id %>">Delete</a>
+              <a class="dltBtn" href="/delete/<%= post._id %>">Delete</a>
+              <p style="padding: 20px 0"><%= post.content %></p>
          
           <% }); %>
       <% } %>

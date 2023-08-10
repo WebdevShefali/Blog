@@ -9,6 +9,7 @@ const Post = require("./models/blog");
 const bcrypt = require("bcrypt");
 const session = require("express-session");
 const PORT = process.env.PORT || 8000;
+const alert = require("alert");
 
 connectToMongo();
 
@@ -46,6 +47,9 @@ app.post("/register", async (req, res) => {
     req.session.user = newUser;
     res.redirect("/home");
   } catch (error) {
+    alert(
+      "User with these credentials already exists. Please try again with different credentials."
+    );
     res.redirect("/register");
   }
 });
@@ -60,12 +64,16 @@ app.post("/", async (req, res) => {
       user.password
     );
     if (!passwordCompare) {
+      alert("Invalid Credentials");
       res.redirect("/");
+      return;
     }
     req.session.user = user;
     res.redirect("/home");
   } catch (error) {
+    alert("Invalid Credentials");
     res.redirect("/");
+    return;
   }
 });
 
@@ -122,7 +130,6 @@ app.get("/edit/:postId", async (req, res) => {
       post: post,
     });
   } catch (error) {
-    console.error(error);
     res.redirect("/home");
   }
 });
@@ -147,7 +154,6 @@ app.post("/edit/:postId", async (req, res) => {
 
     res.redirect("/home");
   } catch (error) {
-    console.error(error);
     res.redirect("/home");
   }
 });
@@ -171,7 +177,6 @@ app.get("/delete/:postId", async (req, res) => {
 
     res.redirect("/userPosts");
   } catch (error) {
-    console.error(error);
     res.redirect("/home");
   }
 });

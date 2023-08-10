@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "alert": "^5.1.4",
     "bcrypt": "^5.1.0",
     "body-parser": "^1.18.3",
     "dotenv": "^16.3.1",

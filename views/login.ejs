@@ -3,7 +3,10 @@
   <form action="/" method="post">
     <h1>Welcome back!</h1>
     <input type="text" name="email" placeholder="Email" required />
-    <input type="password" name="password" placeholder="Password" required />
+    <div class="password-container">
+      <input type="password" name="password" id="password" placeholder="Password" required />
+      <span class="password-toggle" onclick="togglePasswordVisibility()"><i class="fa fa-eye" id="eye-icon"></i></span>
+    </div>
     <button type="submit">Login</button>
   </form>
   <p>Don't have an account? <a href="/register">Sign Up</a></p>

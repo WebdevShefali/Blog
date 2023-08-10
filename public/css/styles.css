@@ -29,7 +29,7 @@ body {
   color: #fff !important;
 }
 .navbar-nav li a:hover,.navbar-nav li a:active {
-  background: transparent;
+  background: black;
 }
 .footer-padding {
   padding-bottom: 60px;
@@ -128,6 +128,16 @@ button,.editBtn,.dltBtn {
 .editBtn:hover,.editBtn:active,.dltBtn:hover,.dltBtn:active{
   color: #fff;
   text-decoration: none;
+}
+.password-container {
+  position: relative;
+}
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 @media only screen and (max-width:425px) {
   .navbar-nav{

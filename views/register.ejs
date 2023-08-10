@@ -4,7 +4,10 @@
     <h1>Create an account</h1>
     <input type="text" name="name" placeholder="Name" required />
     <input type="email" name="email" placeholder="Email" required />
-    <input type="password" name="password" placeholder="Password" required />
+    <div class="password-container">
+      <input type="password" name="password" id="password" placeholder="Password" required />
+      <span class="password-toggle" onclick="togglePasswordVisibility()"><i class="fa fa-eye" id="eye-icon"></i></span>
+    </div>
     <button type="submit">Sign Up</button>
   </form>
   <p>Already have an account? <a href="/">Login</a></p>
